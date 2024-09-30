@@ -16,5 +16,4 @@ export default {
     margin: 2.5rem 0 1.5rem;
     text-align: left;
   }
- 
 </style>
