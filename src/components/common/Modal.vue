@@ -5,13 +5,19 @@
         <div class="modal-container">
           <div class="modal-header">
             <slot name="header">
-              <!--  -->
+              <h3>기본 헤더</h3> <!-- 기본 콘텐츠 추가 -->
+            </slot>
+          </div>
+
+          <div class="modal-body">
+            <slot>
+              기본 본문 내용이 여기에 들어갑니다. <!-- 기본 콘텐츠 추가 -->
             </slot>
           </div>
 
           <div class="modal-footer">
             <slot name="footer">
-              <!--  -->
+              <button @click="$emit('close')">닫기</button> <!-- 기본 콘텐츠 추가 -->
             </slot>
           </div>
         </div>
@@ -19,6 +25,12 @@
     </div>
   </transition>
 </template>
+
+<script>
+export default {
+  name: 'AppModal', // 다단어 이름으로 변경
+}
+</script>
 
 <style lang="css">
 .closeModalBtn {
